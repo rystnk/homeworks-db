@@ -25,7 +25,7 @@ JOIN album a ON al_s.id_album = a.id_album
 WHERE a.release_year IN (2020) );
 
 
-SELECT c."name" AS "compilation name"
+SELECT DISTINCT c."name" AS "compilation name"
 FROM compilation c
 JOIN track_compilation tc ON c.id_compilation = tc.id_compilation
 JOIN track t ON tc.id_track = t.id_track
